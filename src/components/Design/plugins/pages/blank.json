@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "componentsMap": [{
+    "devMode": "lowCode",
+    "componentName": "Page"
+  }],
+  "componentsTree": [{
+    "componentName": "Page",
+    "id": "node_dockcviv8fo1",
+    "props": {},
+    "fileName": "/",
+    "state": {
+      "tableData": {
+        "type": "JSExpression",
+        "value": "[]"
+      },
+      "dialog": {
+        "type": "JSExpression",
+        "value": "false"
+      },
+      "checkbox": {
+        "type": "JSExpression",
+        "value": "''"
+      }
+    },
+    "dataSource": {
+      "list": [{
+          "type": "fetch",
+          "isInit": false,
+          "options": {
+            "params": {},
+            "method": "POST",
+            "isCors": true,
+            "timeout": 5000,
+            "headers": {
+              "Authorization": "Bearer cee1a15ad74d41eda5d1cb5aaef9018d"
+            },
+            "uri": "/gapi/2f7a17f048374ec3/bsg_clue/query"
+          },
+          "id": "getTable"
+        },
+        {
+          "type": "fetch",
+          "isInit": false,
+          "options": {
+            "params": {},
+            "method": "POST",
+            "isCors": true,
+            "timeout": 5000,
+            "headers": {
+              "header": "Bearer cee1a15ad74d41eda5d1cb5aaef9018d"
+            },
+            "uri": "/gapi/3519c534e7ec457e/bsg_clue/insert"
+          },
+          "id": "addForm"
+        }
+      ]
+    },
+    "css": "body {\n  font-size: 12px;\n}\n\n.lc-page {\n  padding: 10px;\n}",
+    "lifeCycles": {
+      "componentDidMount": {
+        "type": "JSFunction",
+        "value": "function componentDidMount() {// this.getTable()\n}"
+      },
+      "componentWillUnmount": {
+        "type": "JSFunction",
+        "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+      }
+    },
+    "methods": {
+      "onClick": {
+        "type": "JSFunction",
+        "value": "function onClick() {}"
+      }
+    },
+    "originCode": "class LowcodeComponent extends Component {\n  state = {\n    tableData: [],\n    dialog: false,\n    checkbox: ''\n  }\n  componentDidMount() {\n    // this.getTable()\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n\n  onClick() {\n  }\n\n}",
+    "hidden": false,
+    "title": "",
+    "isLocked": false,
+    "condition": true,
+    "conditionGroup": ""
+  }],
+  "i18n": {}
+}
