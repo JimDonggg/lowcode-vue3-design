@@ -1,4 +1,4 @@
-import snippets from './snippets';
+import snippets from './snippets'
 
 export default {
   group: '基础组件',
@@ -170,7 +170,12 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: ['onChange', 'onExpandChange', 'onGetCheckedNodes', 'onClearCheckedNodes'],
+      events: [
+        'onChange',
+        'onExpandChange',
+        'onGetCheckedNodes',
+        'onClearCheckedNodes',
+      ],
     },
     component: {
       isContainer: false,
@@ -179,4 +184,4 @@ export default {
   },
   snippets,
   keywords: 'ElCascader',
-};
+}

@@ -1,15 +1,15 @@
-import { Snippet, FieldConfig } from '@alilc/lowcode-types';
-export type Category = '基础' | '表单' | '数据展示' | '导航' | '反馈' | '布局';
+import { Snippet, FieldConfig } from '@alilc/lowcode-types'
+export type Category = '基础' | '表单' | '数据展示' | '导航' | '反馈' | '布局'
 interface ComponentMeta {
   [index: string]: {
-    title: string;
-    category: Category;
-    isContainer?: boolean; // 是否容器组件
-    isModal?: boolean; // 组件是否带浮层
-    snippets?: Snippet[]; // 只能手工写
-    childrenProp?: boolean; // 非自闭合标签需要一个children属性
-    slots?: FieldConfig[];
-  };
+    title: string
+    category: Category
+    isContainer?: boolean // 是否容器组件
+    isModal?: boolean // 组件是否带浮层
+    snippets?: Snippet[] // 只能手工写
+    childrenProp?: boolean // 非自闭合标签需要一个children属性
+    slots?: FieldConfig[]
+  }
 }
 export enum CategoryEnum {
   'layout' = '布局',
@@ -1447,10 +1447,10 @@ const componentMetas: ComponentMeta = {
   //   title: '',
   //   category: '',
   // },
-};
+}
 
 function getSlotSetter(slotName: string, title?: string): FieldConfig {
-  title = title ? title : slotName + '-slot';
+  title = title ? title : slotName + '-slot'
   return {
     name: slotName,
     title: title,
@@ -1462,6 +1462,6 @@ function getSlotSetter(slotName: string, title?: string): FieldConfig {
         value: [],
       },
     },
-  };
+  }
 }
-export default componentMetas;
+export default componentMetas

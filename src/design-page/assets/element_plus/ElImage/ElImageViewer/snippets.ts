@@ -1,7 +1,8 @@
 export default [
   {
     title: '图片预览',
-    screenshot: 'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/image-1.png',
+    screenshot:
+      'https://alifd.alicdn.com/fusion-cool/icons/icon-antd/image-1.png',
     schema: {
       componentName: 'ElImageViewer',
       props: {
@@ -14,4 +15,4 @@ export default [
       },
     },
   },
-];
+]

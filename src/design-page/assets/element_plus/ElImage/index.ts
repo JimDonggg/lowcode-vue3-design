@@ -1,4 +1,4 @@
-import snippets from './snippets';
+import snippets from './snippets'
 
 export default {
   group: '基础组件',
@@ -126,7 +126,8 @@ export default {
       setter: 'BoolSetter',
       condition: {
         type: 'JSFunction',
-        value: 'target => !!target.getProps().getPropValue("previewSrcList").length',
+        value:
+          'target => !!target.getProps().getPropValue("previewSrcList").length',
       },
     },
     // {
@@ -145,7 +146,8 @@ export default {
       setter: 'NumberSetter',
       condition: {
         type: 'JSFunction',
-        value: 'target => !!target.getProps().getPropValue("previewSrcList").length',
+        value:
+          'target => !!target.getProps().getPropValue("previewSrcList").length',
       },
     },
     {
@@ -155,7 +157,8 @@ export default {
       defaultValue: 0,
       condition: {
         type: 'JSFunction',
-        value: 'target => !!target.getProps().getPropValue("previewSrcList")?.length',
+        value:
+          'target => !!target.getProps().getPropValue("previewSrcList")?.length',
       },
     },
     {
@@ -166,7 +169,8 @@ export default {
       defaultValue: true,
       condition: {
         type: 'JSFunction',
-        value: 'target => !!target.getProps().getPropValue("previewSrcList").length',
+        value:
+          'target => !!target.getProps().getPropValue("previewSrcList").length',
       },
     },
   ],
@@ -183,4 +187,4 @@ export default {
   },
   snippets,
   keywords: 'ElImage',
-};
+}

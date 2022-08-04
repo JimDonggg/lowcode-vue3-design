@@ -1,17 +1,17 @@
 // import { Button, Message, Dialog } from '@alifd/next';
-import { saveSchema } from '../utils/store';
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { saveSchema } from '../utils/store'
+import { ILowCodePluginContext } from '@alilc/lowcode-engine'
 // import blankScema from './template-block/templates/base/blank';
 
 const save = async () => {
-  await saveSchema();
+  await saveSchema()
   // Message.success('成功保存到本地');
-};
+}
 
 const preview = async () => {
-  await saveSchema();
-  window.open('preview.html');
-};
+  await saveSchema()
+  window.open('preview.html')
+}
 // const resetPage = (project: any) => {
 //   Dialog.show({
 //     v2: false,
@@ -28,7 +28,7 @@ const savePlugin = (ctx: ILowCodePluginContext) => {
   return {
     name: 'saveSample',
     async init() {
-      const { skeleton, hotkey, project } = ctx;
+      const { skeleton, hotkey, project } = ctx
 
       // skeleton.add({
       //   name: 'resetSample',
@@ -43,29 +43,25 @@ const savePlugin = (ctx: ILowCodePluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: (<button onClick={save}>保存到本地</button>),
-      });
+        content: <button onClick={save}>保存到本地</button>,
+      })
 
       skeleton.add({
         name: 'previewSample',
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: (
-          <button onClick={preview}>
-            预览
-          </button>
-        ),
-      });
+        content: <button onClick={preview}>预览</button>,
+      })
 
       hotkey.bind('command+s', async (e) => {
-        e.preventDefault();
-        save();
-      });
+        e.preventDefault()
+        save()
+      })
     },
-  };
-};
+  }
+}
 
-savePlugin.pluginName = 'saveSample';
+savePlugin.pluginName = 'saveSample'
 
-export default savePlugin;
+export default savePlugin

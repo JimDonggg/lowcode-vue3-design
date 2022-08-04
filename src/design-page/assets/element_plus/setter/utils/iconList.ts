@@ -293,4 +293,4 @@ export default [
   'WindPower',
   'ZoomIn',
   'ZoomOut',
-];
+]

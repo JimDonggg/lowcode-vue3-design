@@ -1,4 +1,4 @@
-import snippets from './snippets';
+import snippets from './snippets'
 
 export default {
   group: '基础组件',
@@ -106,4 +106,4 @@ export default {
   },
   snippets,
   keywords: 'ElRow',
-};
+}

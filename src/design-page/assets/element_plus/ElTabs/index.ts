@@ -1,4 +1,4 @@
-import snippets from './snippets';
+import snippets from './snippets'
 
 export default {
   group: '基础组件',
@@ -125,7 +125,13 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: ['onTabClick', 'onTabChange', 'onEdit', 'onTabRemove', 'onTabAdd'],
+      events: [
+        'onTabClick',
+        'onTabChange',
+        'onEdit',
+        'onTabRemove',
+        'onTabAdd',
+      ],
     },
     component: {
       isContainer: true,
@@ -134,4 +140,4 @@ export default {
   },
   snippets,
   keywords: 'ElTabs',
-};
+}

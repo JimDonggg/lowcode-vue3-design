@@ -16,6 +16,7 @@ import InitPlugin from './plugins/init'
 import SetterPlugin from './plugins/setter'
 import { registerRefProp } from './plugins/set-ref-prop'
 import Actions from './plugins/actions'
+console.log(1234)
 export default defineComponent({
   setup() {
     onMounted(async () => {

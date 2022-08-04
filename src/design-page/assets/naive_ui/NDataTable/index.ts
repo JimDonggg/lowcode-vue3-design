@@ -1,4 +1,4 @@
-import snippets from './snippets';
+import snippets from './snippets'
 
 export default {
   group: '基础组件',
@@ -270,7 +270,7 @@ export default {
               if (value) {
                 target.parent.setPropValue('pagination', {
                   pageSize: 10,
-                });
+                })
               }
             },
           },
@@ -450,4 +450,4 @@ export default {
     },
   },
   snippets,
-};
+}

@@ -1,4 +1,4 @@
-import snippets from './snippets';
+import snippets from './snippets'
 
 export default {
   group: '基础组件',
@@ -91,7 +91,8 @@ export default {
       setter: 'StringSetter',
       condition: {
         type: 'JSFunction',
-        value: 'target => !target.getProps().getPropValue("type").includes("range")',
+        value:
+          'target => !target.getProps().getPropValue("type").includes("range")',
       },
     },
     {
@@ -101,7 +102,8 @@ export default {
       setter: 'StringSetter',
       condition: {
         type: 'JSFunction',
-        value: 'target => target.getProps().getPropValue("type").includes("range")',
+        value:
+          'target => target.getProps().getPropValue("type").includes("range")',
       },
     },
     {
@@ -111,7 +113,8 @@ export default {
       setter: 'StringSetter',
       condition: {
         type: 'JSFunction',
-        value: 'target => target.getProps().getPropValue("type").includes("range")',
+        value:
+          'target => target.getProps().getPropValue("type").includes("range")',
       },
     },
     {
@@ -240,7 +243,8 @@ export default {
       setter: 'BoolSetter',
       condition: {
         type: 'JSFunction',
-        value: 'target => target.getProps().getPropValue("type").includes("range")',
+        value:
+          'target => target.getProps().getPropValue("type").includes("range")',
       },
     },
     {
@@ -257,7 +261,13 @@ export default {
     supports: {
       style: true,
       loop: true,
-      events: ['onChange', 'onBlur', 'onFocus', 'onCalendarChange', 'onVisibleChange'],
+      events: [
+        'onChange',
+        'onBlur',
+        'onFocus',
+        'onCalendarChange',
+        'onVisibleChange',
+      ],
     },
     component: {
       isContainer: false,
@@ -266,4 +276,4 @@ export default {
   },
   snippets,
   keywords: 'ElDatePicker',
-};
+}

@@ -1,16 +1,17 @@
 <template>
   <div class="home">
-    <HelloWorld />
+    <div>源码中单页面应用init只会加载一次，所以做好多页应用</div>
+    <design />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import HelloWorld from '@/components/Design/index.vue' // @ is an alias to /src
+import Design from '../design-page/index.vue' // @ is an alias to /src
 
 @Options({
   components: {
-    HelloWorld,
+    Design,
   },
 })
 export default class Home extends Vue {}

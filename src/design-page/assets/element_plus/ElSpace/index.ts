@@ -115,4 +115,4 @@ export default {
     },
   },
   keywords: 'ElSpace',
-};
+}
