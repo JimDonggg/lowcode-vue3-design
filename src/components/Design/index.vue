@@ -51,8 +51,8 @@ export default defineComponent({
             'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
             'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
             // '/lib/vue-simulator-renderer.css',
-            '/js/simulator.js',
-            // '/js/theme.js',
+            // '/js/simulator.js',
+            '/js/theme.js',
             '/styles/element-plus.css',
           ],
           // 目前appHelper未支持

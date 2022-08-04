@@ -1,8 +1,3 @@
-const path = require('path')
-function resolve(dir) {
-  return path.join(__dirname, dir)
-}
-
 module.exports = {
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   devServer: {
@@ -33,30 +28,34 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
     },
   },
+  publicPath: './',
+  pages: {
+    index: {
+      entry: 'src/main', // page 的入口
+      template: 'public/index.html', // 模板来源
+      filename: 'index.html', // 在 dist/index.html 的输出
+      // 在这个页面中包含的块，默认情况下会包含,提取出来的通用 chunk 和 vendor chunk。
+      chunks: ['chunk-vendors', 'chunk-common', 'index'],
+    },
+    design: {
+      entry: 'src/design-page/main',
+      template: 'public/design.html',
+      filename: 'design.html',
+      chunks: ['chunk-vendors', 'chunk-common', 'design'],
+    },
+  },
   chainWebpack(config) {
     // 移除 prefetch 插件
-    config.plugins.delete('prefetch')
+    // config.plugins.delete('prefetch')
+    // config.plugins.delete('prefetch-index')
+    // config.plugins.delete('prefetch-design')
     // 删除文件预加载
-    config.plugins.delete('preload')
-    // config.module
-    //   .rule('less')
-    //   .use('less-loader')
-    //   .loader('less-loader')
-    //   .options({
-    //     lessOptions: {
-    //       /**less-loader 配置 */
-    //       strictMath: true,
-    //       noIeCompat: true,
-    //     },
-    //   })
+    // config.plugins.delete('preload')
+    config.plugins.delete('preload-index')
+    config.plugins.delete('preload-design')
   },
   // 自定义webpack配置
   configureWebpack: {
-    resolve: {
-      alias: {
-        '@': resolve('src'),
-      },
-    },
     externals: {
       VueRenderer: 'LCVueRenderer',
       '@alilc/next': 'Next',

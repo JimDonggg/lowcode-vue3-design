@@ -1,24 +1,7 @@
 # lowcode-design
 
-## Project setup
-```
-npm install
-```
+## 待解决问题
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. vue jsx 和 react jsx写法冲突问题
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* 方案一： plugin都以cdn或者npm包形式引入
