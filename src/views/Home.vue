@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>源码中单页面应用init只会加载一次，所以做好多页应用</div>
+    <div>源码中单页面应用init只会加载一次，所以最好多页应用，或者改源码</div>
     <design />
   </div>
 </template>

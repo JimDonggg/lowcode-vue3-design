@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" id="lce-container" style="height: 100vh"></div>
+  <div id="lce-container" style="height: 100vh"></div>
 </template>
 
 <script lang="ts">
@@ -16,7 +16,6 @@ import InitPlugin from './plugins/init'
 import SetterPlugin from './plugins/setter'
 import { registerRefProp } from './plugins/set-ref-prop'
 import Actions from './plugins/actions'
-console.log(1234)
 export default defineComponent({
   setup() {
     onMounted(async () => {
@@ -38,7 +37,7 @@ export default defineComponent({
       await plugins.register(SetterPlugin)
       await plugins.register(InitPlugin)
       await plugins.register(CodeEditor)
-      // await plugins.register(Actions)
+      await plugins.register(Actions)
       await plugins.register(registerRefProp)
       await init(
         document.getElementById('lce-container')!,

@@ -1,11 +1,12 @@
-// import { Button, Message, Dialog } from '@alifd/next';
+import React from 'react'
+import { Button, Message, Dialog } from '@alifd/next';
 import { saveSchema } from '../utils/store'
 import { ILowCodePluginContext } from '@alilc/lowcode-engine'
 // import blankScema from './template-block/templates/base/blank';
 
 const save = async () => {
   await saveSchema()
-  // Message.success('成功保存到本地');
+  Message.success('成功保存到本地');
 }
 
 const preview = async () => {
@@ -43,7 +44,7 @@ const savePlugin = (ctx: ILowCodePluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: <button onClick={save}>保存到本地</button>,
+        content: <Button onClick={save}>保存到本地</Button>,
       })
 
       skeleton.add({
@@ -51,7 +52,7 @@ const savePlugin = (ctx: ILowCodePluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: <button onClick={preview}>预览</button>,
+        content: <Button onClick={preview}>预览</Button>,
       })
 
       hotkey.bind('command+s', async (e) => {

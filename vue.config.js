@@ -5,24 +5,14 @@ module.exports = {
     disableHostCheck: false, // 是否跳过 host 检查
     port: 8080,
     proxy: {
-      '/apiService': {
-        // target: "http://192.168.11.253:12340/mock/1137/", // mock
-        // target: "http://192.168.161.80:8080/", // chenghl
-        target: 'http://192.168.11.253:38005/', // 开发环境 http://192.168.11.85:28287/api/federal/user/login
+      '/api': {
+        target: 'http://www.baidu.com', // dev
         changeOrigin: true,
-        pathRewrite: { '^/apiService': '' }, // 将路径中的某个字段替换成其他内容
-      },
-      '/gdios/lowcode/proxy': {
-        target: 'http://192.168.11.11:30309', // dev
-        changeOrigin: true,
-        pathRewrite: {
-          // '^/gdios/lowcode/proxy': '/',
-        },
       },
     },
     overlay: {
       warnings: false,
-      errors: true,
+      errors: false,
     },
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -43,6 +33,12 @@ module.exports = {
       filename: 'design.html',
       chunks: ['chunk-vendors', 'chunk-common', 'design'],
     },
+    preview: {
+      entry: 'src/preview-page/main',
+      template: 'public/preview.html',
+      filename: 'preview.html',
+      // chunks: ['chunk-vendors', 'chunk-common', 'preview'],
+    },
   },
   chainWebpack(config) {
     // 移除 prefetch 插件
@@ -53,20 +49,22 @@ module.exports = {
     // config.plugins.delete('preload')
     config.plugins.delete('preload-index')
     config.plugins.delete('preload-design')
+    config.plugins.delete('preload-preview')
   },
   // 自定义webpack配置
   configureWebpack: {
     externals: {
-      VueRenderer: 'LCVueRenderer',
+      // vue: 'var window.Vue',
+      // VueRenderer: 'LCVueRenderer',
       '@alilc/next': 'Next',
       '@alilc/lowcode-engine': 'AliLowCodeEngine',
       '@alilc/lowcode-engine-ext': 'AliLowCodeEngineExt',
       '@alilc/lowcode-editor-core': 'AliLowCodeEngine.common.editorCabin',
       '@alilc/lowcode-designer': 'AliLowCodeEngine.common.designerCabin',
       '@alilc/lowcode-editor-skeleton': 'AliLowCodeEngine.common.skeletonCabin',
-      '@knxcloud/lowcode-vue-renderer': 'LCVueRenderer',
+      // '@knxcloud/lowcode-vue-renderer': 'LCVueRenderer',
       '@knxcloud/lowcode-vue-simulator-renderer': 'LCVueSimulatorRenderer',
-      lodash: '_',
+      lodash: 'var window._',
       moment: 'moment',
       'prop-types': 'PropTypes',
       react: 'React',
