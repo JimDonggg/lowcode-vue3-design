@@ -62,7 +62,7 @@ module.exports = {
       '@alilc/lowcode-editor-core': 'AliLowCodeEngine.common.editorCabin',
       '@alilc/lowcode-designer': 'AliLowCodeEngine.common.designerCabin',
       '@alilc/lowcode-editor-skeleton': 'AliLowCodeEngine.common.skeletonCabin',
-      // '@knxcloud/lowcode-vue-renderer': 'LCVueRenderer',
+      '@knxcloud/lowcode-vue-renderer': 'LCVueRenderer',
       '@knxcloud/lowcode-vue-simulator-renderer': 'LCVueSimulatorRenderer',
       lodash: 'var window._',
       moment: 'moment',
