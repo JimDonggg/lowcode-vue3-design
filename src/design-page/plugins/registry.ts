@@ -16,7 +16,6 @@ const builtinPluginRegistry = (ctx: ILowCodePluginContext) => {
       //   content: Logo,
       //   contentProps: {
       //     logo: '/images/logo.png',
-      //     href: 'https://cf.ge.cn/pages/viewpage.action?pageId=153558822',
       //   },
       //   props: {
       //     align: 'left',
